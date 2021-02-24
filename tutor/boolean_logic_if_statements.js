@@ -6,4 +6,6 @@
 
 // Ternary
 const status = 200;
-const message = (status === 200) ? 'ok' : 'error';// message = 'ok'
+const message = (status === 200)
+  ? 'ok'
+  : 'error';// message = 'ok'
