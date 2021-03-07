@@ -7,7 +7,7 @@ class Person {
     this.skills = []
     this.score = 0
   }
-  getFullName() {
+    getFullName() {
     const fullName = this.firstName + ' ' + this.lastName
     return fullName
   }
