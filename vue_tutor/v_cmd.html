@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+  <title>v_cmd</title>
+</head>
+
+<body>
+  <div id='app'>
+    <h2 v-text='message'>not show</h2>
+    <h2>{{message + '!'}} Show</h2>
+    <p v-html='content'></p>
+    <p v-text='content'></p>
+    <input type='button' value='v-on Full' v-on:click='doIt'>
+    <input type='button' value='v-on Short' @click='doIt'>
+    <input type='button' value='v-on Double Click' @dblclick='doIt'>
+    <li @click='changeFood'>
+      {{food}}
+    </li>
+  </div>
+  <script src='https://cdn.jsdelivr.net/npm/vue/dist/vue.js'></script>
+  <script>
+    var app = new Vue({
+      el: "#app",
+      data: {
+        message: 'V-Text',
+        content: "<a href='http://www.google.com'>Google</a>",
+        food: 'Potato'
+      },
+      methods: {
+        doIt: function () {
+          alert('Do it!')
+        },
+        changeFood: function () {
+          this.food+=' taste good!'
+        }
+      },
+    })
+  </script>
+</body>
+</html>

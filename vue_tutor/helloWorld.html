@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+  <title>Vue Test</title>
+</head>
+
+<script src='https://cdn.jsdelivr.net/npm/vue/dist/vue.js'></script>
+
+<body>
+  Hello
+  <div id='app'>
+    {{ message }}
+  </div>
+  <div id='app1'>
+    {{info.name}} is {{info.age}} years old.
+    And he is {{skills[0]}}, can {{skills[1]}} and {{skills[2]}}
+  </div>
+</body>
+
+<script>
+  var app = new Vue({
+    el: '#app',
+    data: {
+      message: 'Vue'
+    }
+  })
+  var app1 = new Vue({
+    el: '#app1',
+    data: {
+      info: {
+        name: 'Air Keith',
+        age: '22'
+      },
+      skills: ['Cool', 'Coding', 'Sex']
+    }
+  })
+</script>
+
+</html>
