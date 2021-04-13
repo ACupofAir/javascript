@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+  <head>
+    <title>v_counter</title>
+  </head>
+
+  <body>
+    <div id='app'>
+      <button @click='sub'> - </button>
+      <span> {{num}} </span>
+      <button @click='add'> + </button>
+    </div>
+    <script src='https://cdn.jsdelivr.net/npm/vue/dist/vue.js'></script>
+    <script>
+      var app = new Vue({
+              el: "#app",
+              data: {
+                      num: 1
+                    },
+              methods: {
+                      add: function() {
+                              if(this.num < 10) {
+                                      this.num++;
+                                    } else {
+                                            alert('It has been top!');
+                                          }
+                            },
+                      sub : function() {
+                              if(this.num > 0) {
+                                      this.num--;
+                                    } else {
+                                            alert('It has been bottom!');
+                                          }
+                            }
+                    }
+            })
+    </script>
+  </body>
+
+</html>
